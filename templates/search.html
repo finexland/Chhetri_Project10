@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 
 {% block title %}Search{% endblock %}
@@ -8,11 +7,12 @@
 
 <form action="/search" method="get">
     <label for="term">Enter a search term:</label>
-    <input type="text" id="term" name="term">
+    <input type="text" id="term" name="term" value="{{ term }}">
     <button type="submit">Search</button>
 </form>
 
 {% if term %}
     <p>You searched for: {{ term }}</p>
 {% endif %}
+
 {% endblock %}
