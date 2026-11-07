@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+<h2>Search Page</h2>
+
+<form action="/search" method="get">
+    <label for="term">Enter a search term:</label>
+    <input type="text" id="term" name="term">
+    <button type="submit">Search</button>
+</form>
+
+{% if term %}
+    <p>You searched for: {{ term }}</p>
+{% endif %}
+{% endblock %}
